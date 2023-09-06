@@ -1,0 +1,67 @@
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\appsettings.Development.json
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\appsettings.json
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\IT Management.exe
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\IT Management.deps.json
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\IT Management.runtimeconfig.json
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\IT Management.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\IT Management.pdb
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Humanizer.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.csproj.AssemblyReference.cache
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.AssemblyInfoInputs.cache
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.AssemblyInfo.cs
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.csproj.CoreCompileInputs.cache
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets\msbuild.IT Management.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets\msbuild.build.IT Management.props
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.IT Management.props
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.IT Management.props
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\scopedcss\bundle\IT Management.styles.css
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.csproj.CopyComplete
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.dll
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\refint\IT Management.dll
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.pdb
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\IT Management.genruntimeconfig.cache
+D:\Projects\Samarpan\IT Management\IT Management\obj\Debug\net6.0\ref\IT Management.dll
+D:\Projects\Samarpan\IT Management\IT Management\bin\Debug\net6.0\Newtonsoft.Json.dll
