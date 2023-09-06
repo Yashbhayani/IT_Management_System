@@ -1,0 +1,281 @@
+<div class="container-fluid">
+  <div class="alert alert-{{Color}} alert-dismissible fade show" [hidden]="AlertVal" role="alert">
+    {{Message}}
+    <button type="button" class="btn-close" [hidden]="AlertVal" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+
+<div class="container-fluid p-3">
+  <form class="row g-3" [formGroup]="FilterForm" (ngSubmit)="GetFilterData()">
+    <div class="col-md-4">
+      <label for="inputEmail4" class="form-label">Min Value</label>
+      <input type="number" class="form-control" id="inputEmail4" formControlName="MinValue">
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Max Value</label>
+      <input type="number" class="form-control" id="inputPassword4" formControlName="MaxValue">
+    </div>
+    <div class="col-md-4">
+      <label for="inputDate" class="form-label">Joining Date</label>
+      <input type="date" class="form-control" id="inputDate" formControlName="joiningDate" required>
+    </div>
+    <div class="col-md-4" *ngIf="UAC">
+      <label for="inputState" class="form-label">Department</label>
+      <select id="inputState" class="form-select" formControlName="DepartmentName" [(ngModel)]="NewDDR"
+        (change)="PatchAddChange($event)">
+        <option *ngFor="let i of NewDDATA" [value]="i.departmentName">
+          {{i.departmentName}}
+        </option>
+      </select>
+    </div>
+    <!-- [(ngModel)]="NewDDRR"
+        (change)="PatchAddRoleChange($event)" -->
+    <div class="col-md-4">
+      <label for="inputState" class="form-label"> Employee Role</label>
+      <select id="inputState" class="form-select" formControlName="EmployeeRole" >
+        <option selected value="">...Select Employee Role...</option>
+        <option *ngFor="let i of NewDRole" [value]="i.employeeRole">
+          {{i.employeeRole}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select" formControlName="State" [(ngModel)]="NewST"
+        (change)="PatchNewAddState($event)">
+        <option selected value="">...Select State...</option>
+
+        <option *ngFor="let i of NewStateData" [value]="i.state">
+          {{i.state}}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">City</label>
+      <select id="inputState" class="form-select" formControlName="City" [(ngModel)]="NewCI"
+        (change)="PatchNewAddCity($event)">
+        <option selected value="">...Select City...</option>
+
+        <option *ngFor="let i of NewCitydata" [value]="i.city">
+          {{i.city}}
+        </option>
+      </select>
+    </div>
+    <!--[(ngModel)]="NewBr"
+        (change)="AddBRChange($event)" -->
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Branch</label>
+      <select id="inputState" class="form-select" formControlName="Branch" >
+        <option selected value="">...Select Branch...</option>
+
+        <option *ngFor="let i of NewPatchBranchdata" [value]="i.branch">
+          {{i.branch}}
+        </option>
+      </select>
+    </div>
+    <div class="col-12 d-flex justify-content-end">
+      <button type="submit" class="btn btn-outline-primary me-2" >Submit</button>
+      <button type="button" class="btn btn-outline-danger" (click)="Reset()">Reset</button>
+
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid ">
+  <nav class="navbar p-2">
+    <div class="container-fluid mb3">
+      <a class="navbar-brand"></a>
+      <form class="d-flex mx-auto" role="search">
+        <input class="form-control me-2 mb-3" type="search" placeholder="Search" aria-label="Search" size="50"
+          name="first_name" [(ngModel)]="fname1" autocomplete="off" (ngModelChange)="Search()">
+      </form>
+    </div>
+  </nav>
+  <table class="table table-hover text-center mx-auto">
+    <thead>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Department Name</th>
+      <th scope="col">Employee Role</th>
+      <th scope="col">State</th>
+      <th scope="col">Branch</th>
+      <th scope="col">City</th>
+      <th scope="col">Joining Date</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Edit</th>
+    </thead>
+    <tbody *ngFor="
+  let item of EmployeeData |
+    paginate
+    : {
+      itemsPerPage: tableSize,
+      currentPage: page,
+      totalItems:count
+    }; let i = index">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.password}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.departmentName}}</td>
+        <td>{{item.employee_Role}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.branch}}</td>
+        <td>{{item.joiningDate | date:'dd/MM/yyyy'}}</td>
+        <td>{{item.salary}}</td>
+        <td>
+          <div class="dropdown">
+            <i class="btn btn-outline-warning dropdown-toggle bi bi-option" data-bs-toggle="dropdown"
+              aria-expanded="false"></i>
+
+            <ul class="dropdown-menu p-3">
+              <div class="row">
+                <div class="col">
+                  <li><i class="bi bi-pen-fill btn btn-outline-primary" (click)="EditData(item.id)"></i></li>
+                </div>
+                <div class="col" *ngIf="UAC">
+                  <li><i class="bi bi-trash btn btn-outline-danger" (click)="DeleteData(item.id)"></i></li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="d-flex justify-content-center">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <select name="noOfRows" (change)="onTableSizeChange($event)" class="form-select form-select-sm">
+            <option *ngFor="let size of tableSizes" [ngValue]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Model1 -->
+<div class="modal" id="editModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Customer</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="Closemodel()"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="row g-3"  [formGroup]="EditEmployeeForm" (ngSubmit)="UpdateEmployeeData()" >
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label">FirstName</label>
+            <input type="text" class="form-control" id="inputEmail4" formControlName="firstName">
+          </div>
+          <div class="col-md-4">
+            <label for="inputPassword4" class="form-label">LastName</label>
+            <input type="text" class="form-control" id="inputPassword4" formControlName="lastName">
+          </div>
+          <div class="col-md-4">
+            <label for="inputPassword4" class="form-label">Email</label>
+            <input type="text" class="form-control" id="inputPassword4" formControlName="email">
+          </div>
+          <div class="col-4">
+            <label for="inputAddress" class="form-label">Password</label>
+            <input type="text" class="form-control" id="inputAddress" formControlName="password">
+          </div>
+          <div class="col-4">
+            <label for="inputAddress" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="inputAddress"  formControlName="phone">
+          </div>
+          <div class="col-md-4">
+            <label for="inputDate" class="form-label">Joining Date</label>
+            <input type="date" class="form-control" id="inputDate" formControlName="joiningDate" value="{{ inputDate  | date:'yyyy-MM-dd' }}" required>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Department</label>
+            <select id="inputState" class="form-select" formControlName="department" [(ngModel)]="DDR" (change)="AddChange($event)">
+              <option *ngFor="let i of DData" [value]="i.departmentName">
+                {{i.departmentName}}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label"> Employee Role</label>
+            <select id="inputState" class="form-select" formControlName="role" [(ngModel)]="DDRR" (change)="AddRoleChange($event)">
+              <option *ngFor="let i of DRole" [value]="i.employeeRole">
+                {{i.employeeRole}}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputCity" class="form-label">Salary</label>
+            <input type="number" class="form-control" id="inputCity" formControlName="salary">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select" formControlName="state" [(ngModel)]="ST" (change)="AddSTChange($event)">
+              <option selected value="">...Select State...</option>
+              <option *ngFor="let i of Statedata" [value]="i.state">
+                {{i.state}}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">City</label>
+            <select id="inputState" class="form-select" formControlName="city" [(ngModel)]="CI" (change)="AddCTChange($event)">
+              <option selected value="">...Select City...</option>
+
+              <option *ngFor="let i of Citydata" [value]="i.city">
+                {{i.city}}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Branch</label>
+            <select id="inputState" class="form-select" formControlName="branch" [(ngModel)]="BR" (change)="AddBRChange($event)">
+              <option selected value="">...Select Branch...</option>
+
+              <option *ngFor="let i of Bdata" [value]="i.branch">
+                {{i.branch}}
+              </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-outline-warning">Update</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="Closemodel()">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

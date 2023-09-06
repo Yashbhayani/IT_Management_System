@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="alert alert-{{Color}} alert-dismissible fade show" [hidden]="AlertVal" role="alert">
+    {{Message}}
+    <button type="button" class="btn-close" [hidden]="AlertVal" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+<div class="container-fluid ">
+  <form class="row g-3" [formGroup]="EmployeeForm" (ngSubmit)="AddEmployeeData()">
+    <div class="col-md-4">
+      <label for="inputEmail4" class="form-label">FirstName</label>
+      <input type="text" class="form-control" id="inputEmail4" formControlName="firstName">
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">LastName</label>
+      <input type="text" class="form-control" id="inputPassword4" formControlName="lastName">
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Email</label>
+      <input type="text" class="form-control" id="inputPassword4" formControlName="email">
+    </div>
+    <div class="col-4">
+      <label for="inputAddress" class="form-label">Password</label>
+      <input type="text" class="form-control" id="inputAddress" formControlName="password">
+    </div>
+    <div class="col-4">
+      <label for="inputAddress" class="form-label">Phone</label>
+      <input type="text" class="form-control" id="inputAddress" formControlName="phone">
+    </div>
+    <div class="col-md-4">
+      <label for="inputDate" class="form-label">Joining Date</label>
+      <input type="date" class="form-control" id="inputDate" formControlName="joiningDate" required>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Department</label>
+      <select id="inputState" class="form-select" formControlName="department" [(ngModel)]="DDR"
+        (change)="AddChange($event)">
+        <option *ngFor="let i of DData" [value]="i.departmentName">
+          {{i.departmentName}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label"> Employee Role</label>
+      <select id="inputState" class="form-select" formControlName="role" [(ngModel)]="DDRR"
+        (change)="AddRoleChange($event)">
+        <option *ngFor="let i of DRole" [value]="i.employeeRole">
+          {{i.employeeRole}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCity" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="inputCity" formControlName="salary">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select" formControlName="state" [(ngModel)]="ST"
+        (change)="AddSTChange($event)">
+        <option selected value="">...Select State...</option>
+
+        <option *ngFor="let i of Statedata" [value]="i.state">
+          {{i.state}}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">City</label>
+      <select id="inputState" class="form-select" formControlName="city" [(ngModel)]="CI"
+        (change)="AddCTChange($event)">
+        <option selected value="">...Select City...</option>
+
+        <option *ngFor="let i of Citydata" [value]="i.city">
+          {{i.city}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Branch</label>
+      <select id="inputState" class="form-select" formControlName="branch" [(ngModel)]="BR"
+        (change)="AddBRChange($event)">
+        <option selected value="">...Select Branch...</option>
+
+        <option *ngFor="let i of Bdata" [value]="i.branch">
+          {{i.branch}}
+        </option>
+      </select>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-outline-primary" [disabled]="EmployeeForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,81 @@
+<table class="container-fluid table table-bordered border-primary text-center" *ngIf="Admin" style="width: 30%;">
+  <tbody>
+    <tr>
+      <th scope="col">First Name</th>
+      <td>{{UserData.firstName}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Email</th>
+      <td>{{UserData.email}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Password</th>
+      <td>{{UserData.password}}</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<table class="container-fluid table table-bordered border-primary text-center" *ngIf="Employee" style="width: 50%;">
+  <tbody>
+    <tr>
+      <th scope="col">First Name</th>
+      <td>{{UserData.firstName}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Last Name</th>
+      <td>{{UserData.lastName}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Email</th>
+      <td>{{UserData.email}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Phone</th>
+      <td>{{UserData.phone}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Employee Role</th>
+      <td>{{UserData.employee_Role}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Department Name</th>
+      <td>{{UserData.departmentName}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">State</th>
+      <td>{{UserData.state}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">City</th>
+      <td>{{UserData.city}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Branch</th>
+      <td>{{UserData.branch}}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Joining Date</th>
+      <td>{{UserData.joiningDate | date:'dd/MM/yyyy' }}</td>
+    </tr>
+
+    <tr>
+      <th scope="col">Salary</th>
+      <td>{{UserData.salary}}</td>
+    </tr>
+
+
+
+  </tbody>
+
+</table>

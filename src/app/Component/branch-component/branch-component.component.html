@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="alert alert-{{Color}} alert-dismissible fade show" [hidden]="AlertVal" role="alert">
+    {{Message}}
+    <button type="button" class="btn-close" [hidden]="AlertVal" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+
+
+<div class="container-lg p-5">
+  <form class="row g-3"  [formGroup]="BranchForm" (ngSubmit)="AddAndUpdateBranchData()">
+    <div class=" col-md-4">
+    <label for="inputFirstName" class="form-label">State</label>
+    <input type="text" class="form-control" id="inputFirstName" formControlName="State" required>
+    </div>
+    <div class="col-md-4">
+      <label for="inputLastName" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputLastName" formControlName="City" required>
+    </div>
+    <div class="col-md-4">
+      <label for="inputPhone" class="form-label">Branch</label>
+      <input type="tel" class="form-control" id="inputPhone" formControlName="Branch" required>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-outline-{{BtColor}} float-end">{{ButtonName}}</button>
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid ">
+  <nav class="navbar p-2">
+    <div class="container-fluid mb3">
+      <a class="navbar-brand"></a>
+      <form class="d-flex mx-auto" role="search">
+        <input class="form-control me-2 mb-3" type="search" placeholder="Search" aria-label="Search" size="50"
+          name="firstname" [(ngModel)]="fname1" autocomplete="off" (ngModelChange)="Search()">
+      </form>
+    </div>
+  </nav>
+  <table class="table table-hover text-center mx-auto" style="width: 50%;">
+    <thead>
+      <th scope="col">Id</th>
+      <th scope="col">State</th>
+      <th scope="col">City</th>
+      <th scope="col">Barnch</th>
+      <th scope="col">Edit</th>
+    </thead>
+    <tbody *ngFor="
+  let item of BranchData |
+    paginate
+    : {
+      itemsPerPage: tableSize,
+      currentPage: page,
+      totalItems:count
+    }; let i = index">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.state}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.branch}}</td>
+        <td><i class="bi bi-pen-fill btn btn-outline-primary" (click)="EditData(item.id)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="d-flex justify-content-center">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <select name="noOfRows" (change)="onTableSizeChange($event)" class="form-select form-select-sm">
+            <option *ngFor="let size of tableSizes" [ngValue]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
